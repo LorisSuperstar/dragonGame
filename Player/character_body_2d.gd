@@ -25,3 +25,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = SPEED
 		$Sprite2D.flip_h = true
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print("dead?")
+	if body.name == "Ofenkäse_Enemy" or body.name == "rbs_enemy":
+		print("dead now?")
+		queue_free()

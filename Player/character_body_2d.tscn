@@ -5,7 +5,11 @@
 [ext_resource type="Script" uid="uid://eq13bcdfp1yh" path="res://Player/camera_2d.gd" id="2_vvw5e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_57qmd"]
-radius = 57.0
+radius = 54.0
+height = 250.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
+radius = 55.0
 height = 250.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1504159941]
@@ -20,3 +24,11 @@ shape = SubResource("CapsuleShape2D_57qmd")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=516204262]
 script = ExtResource("2_vvw5e")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1054178305]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1744609129]
+position = Vector2(-3, -10)
+shape = SubResource("CapsuleShape2D_g4v7s")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

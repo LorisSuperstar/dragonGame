@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://caswkcocifg2b" path="res://Enemy/RBS.png" id="2_jtcm8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ms1lq"]
-size = Vector2(452, 332)
+size = Vector2(582, 372)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ipabm"]
-size = Vector2(419, 91)
+size = Vector2(194.3125, 26)
 
 [node name="rbs_enemy_tscn" type="CharacterBody2D" unique_id=1464238020]
 script = ExtResource("1_jtcm8")
@@ -16,13 +16,13 @@ script = ExtResource("1_jtcm8")
 texture = ExtResource("2_jtcm8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1460947261]
-position = Vector2(67, -16)
+position = Vector2(117, -36)
 shape = SubResource("RectangleShape2D_ms1lq")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1813496330]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1856005187]
-position = Vector2(71.5, -219)
+position = Vector2(167, -135)
 shape = SubResource("RectangleShape2D_ipabm")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
