@@ -13,6 +13,10 @@ config_version=5
 config/name="DragonGame"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
+[autoload]
+
+GlobalMusic="*uid://gpkasch50onl"
+
 [display]
 
 window/stretch/mode="canvas_items"

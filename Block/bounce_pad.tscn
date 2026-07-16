@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://k353r1qgo4xl" path="res://Block/bounce_pad.gd" id="1_erx6g"]
 [ext_resource type="Texture2D" uid="uid://cfr2id4lhrc3q" path="res://Block/Screenshot_2026-07-16_132753-removebg-preview.png" id="2_erx6g"]
+[ext_resource type="AudioStream" uid="uid://hc68b13rbwag" path="res://Block/drachenlord-stuhl-bricht.mp3" id="3_q2xkp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 size = Vector2(554, 273)
@@ -15,5 +16,8 @@ texture = ExtResource("2_erx6g")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1497026714]
 position = Vector2(2, 22.5)
 shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="BounceSound" type="AudioStreamPlayer2D" parent="." unique_id=2123892382]
+stream = ExtResource("3_q2xkp")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

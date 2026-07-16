@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://gpkasch50onl"]
+
+[ext_resource type="AudioStream" uid="uid://ywi7li4f34c6" path="res://Map/Lügenlord Song Drachenlord.mp3" id="1_w5017"]
+
+[node name="GlobalMusic" type="AudioStreamPlayer" unique_id=591277106]
+stream = ExtResource("1_w5017")
+autoplay = true
+parameters/looping = true
