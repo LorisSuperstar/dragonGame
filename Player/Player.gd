@@ -20,6 +20,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		$Jump.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -39,8 +40,13 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			big = false
 		else:
 			print("dead now?")
+			hide()
+			var camera = get_node_or_null("Camera2D")
+			remove_child(camera)
+			$CollisionShape2D.set_deferred("disabled", true)
+			$Dead.play()
+			await $Dead.finished
 			queue_free()
-			
 func make_normal_size() -> void:
 	scale = Vector2(0.2, 0.2)
 	big = true

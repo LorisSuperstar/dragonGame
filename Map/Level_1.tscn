@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bk8kpadippcl4" path="res://Map/maxresdefault-4004375572.jpg" id="1_3tc37"]
 [ext_resource type="Texture2D" uid="uid://jp1xjh065wm7" path="res://Map/city_sidewalk_tileset_by_darkaaron999_dcpucl2-fullview-3455026737-removebg-preview.png" id="2_3tc37"]
-[ext_resource type="PackedScene" uid="uid://c735ha3etikl8" path="res://Player/character_body_2d.tscn" id="3_ynyo3"]
+[ext_resource type="PackedScene" uid="uid://c735ha3etikl8" path="res://Player/Player.tscn" id="3_ynyo3"]
 [ext_resource type="PackedScene" uid="uid://c8cw5ae2xvwf1" path="res://Enemy/ofenkäse_enemy.tscn" id="4_o8i3h"]
 [ext_resource type="PackedScene" uid="uid://be262nbowkctr" path="res://Enemy/rbs_enemy.tscn" id="5_ytwkd"]
 [ext_resource type="PackedScene" uid="uid://dbfsmgngyivc0" path="res://Items/Monster.tscn" id="6_hda5w"]
@@ -839,20 +839,6 @@ tile_set = SubResource("TileSet_jgsfc")
 position = Vector2(62.666668, 60)
 scale = Vector2(0.2, 0.2)
 
-[node name="Enemys" type="Node2D" parent="." unique_id=316090006]
-
-[node name="Ofenkäse_Enemy2" parent="Enemys" unique_id=1317518145 instance=ExtResource("4_o8i3h")]
-position = Vector2(519.99994, 443.99997)
-scale = Vector2(0.1, 0.1)
-
-[node name="Ofenkäse_Enemy" parent="Enemys" unique_id=1464238020 instance=ExtResource("4_o8i3h")]
-position = Vector2(910.99994, 474.99997)
-scale = Vector2(0.1, 0.1)
-
-[node name="rbs_enemy" parent="Enemys" unique_id=2090878590 instance=ExtResource("5_ytwkd")]
-position = Vector2(676, 485)
-scale = Vector2(0.3, 0.3)
-
 [node name="Items" type="Node2D" parent="." unique_id=184810728]
 
 [node name="Monster" parent="Items" unique_id=833427457 instance=ExtResource("6_hda5w")]
@@ -882,5 +868,13 @@ shape = SubResource("RectangleShape2D_yf5fn")
 [node name="Goal" parent="." unique_id=861521742 instance=ExtResource("9_ber6b")]
 position = Vector2(2320, 357.99994)
 scale = Vector2(0.1, 0.1)
+
+[node name="Ofenkäse_Enemy" parent="." unique_id=1464238020 instance=ExtResource("4_o8i3h")]
+position = Vector2(910.99994, 474.99997)
+scale = Vector2(0.1, 0.1)
+
+[node name="rbs_enemy" parent="." unique_id=2090878590 instance=ExtResource("5_ytwkd")]
+position = Vector2(676, 485)
+scale = Vector2(0.3, 0.3)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

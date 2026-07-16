@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://c735ha3etikl8"]
 
-[ext_resource type="Script" uid="uid://dia43lhcgrvi5" path="res://Player/character_body_2d.gd" id="1_inwu4"]
+[ext_resource type="Script" uid="uid://dia43lhcgrvi5" path="res://Player/Player.gd" id="1_inwu4"]
 [ext_resource type="Texture2D" uid="uid://cuf6f0wpppvnx" path="res://Player/canvas.png" id="1_v8jqv"]
 [ext_resource type="Script" uid="uid://eq13bcdfp1yh" path="res://Player/camera_2d.gd" id="2_vvw5e"]
+[ext_resource type="AudioStream" uid="uid://y58tq7o3lg41" path="res://Player/VERFLUCHT NOCHMAL.mp3" id="4_srlcf"]
+[ext_resource type="AudioStream" uid="uid://dugoarwix03ja" path="res://Player/etzela.mp3" id="5_8g4oa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_57qmd"]
 radius = 54.0
@@ -12,7 +14,7 @@ height = 250.0
 radius = 55.0
 height = 250.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1504159941]
+[node name="Player" type="CharacterBody2D" unique_id=1504159941]
 script = ExtResource("1_inwu4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=226479750]
@@ -30,5 +32,12 @@ script = ExtResource("2_vvw5e")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1744609129]
 position = Vector2(-3, -10)
 shape = SubResource("CapsuleShape2D_g4v7s")
+
+[node name="Dead" type="AudioStreamPlayer2D" parent="." unique_id=197583294]
+stream = ExtResource("4_srlcf")
+volume_db = 1.0
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="." unique_id=1296002051]
+stream = ExtResource("5_8g4oa")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
