@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dbfsmgngyivc0" path="res://Items/Monster.tscn" id="6_wcs71"]
 [ext_resource type="PackedScene" uid="uid://koyq25lk2k4g" path="res://Block/question_block.tscn" id="7_7c477"]
 [ext_resource type="Script" uid="uid://snkn7rsldu31" path="res://Map/area_2d.gd" id="8_bgsv1"]
+[ext_resource type="PackedScene" uid="uid://bh0tteo2jwifq" path="res://Goal/goal.tscn" id="9_5b7qn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e8at2"]
 texture = ExtResource("1_mcmny")
@@ -164,5 +165,9 @@ script = ExtResource("8_bgsv1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2117510258]
 position = Vector2(-1711, 746)
 shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Goal" parent="." unique_id=861521742 instance=ExtResource("9_5b7qn")]
+position = Vector2(2320, 357.99994)
+scale = Vector2(0.1, 0.1)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

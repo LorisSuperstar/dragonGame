@@ -10,7 +10,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	animated_sprite.play("open")
 	var item = spawn_item_scene.instantiate()
 	item.scale = Vector2(scale_x, scale_y)
-	item.position = global_position + Vector2(0, -16)
+	item.position = global_position + Vector2(0, -30)
 	get_parent().add_child(item)
 	queue_free()
 	
