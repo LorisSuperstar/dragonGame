@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceelbi0ft1mpc"
-path="res://.godot/imported/bounce pad.png-963f8fdf41f02d0d8bdc77d6f1cb2b4b.ctex"
+uid="uid://cfr2id4lhrc3q"
+path="res://.godot/imported/Screenshot_2026-07-16_132753-removebg-preview.png-913c0f80cda488af56eb00a8fc900952.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Block/bounce pad.png"
-dest_files=["res://.godot/imported/bounce pad.png-963f8fdf41f02d0d8bdc77d6f1cb2b4b.ctex"]
+source_file="res://Block/Screenshot_2026-07-16_132753-removebg-preview.png"
+dest_files=["res://.godot/imported/Screenshot_2026-07-16_132753-removebg-preview.png-913c0f80cda488af56eb00a8fc900952.ctex"]
 
 [params]
 

@@ -862,8 +862,8 @@ scale = Vector2(0.05, 0.05)
 [node name="Blocks" type="Node2D" parent="." unique_id=153050876]
 
 [node name="BouncePad" parent="Blocks" unique_id=1274885407 instance=ExtResource("7_jgsfc")]
-position = Vector2(1678, 475)
-scale = Vector2(4, 4)
+position = Vector2(1669, 508)
+scale = Vector2(0.2, 0.2)
 
 [node name="Crate" parent="Blocks" unique_id=322382583 instance=ExtResource("7_jt4da")]
 position = Vector2(1468, 310)
