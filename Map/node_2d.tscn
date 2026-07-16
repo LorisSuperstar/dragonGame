@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://be262nbowkctr" path="res://Enemy/rbs_enemy.tscn" id="5_rq3ce"]
 [ext_resource type="PackedScene" uid="uid://dbfsmgngyivc0" path="res://Items/Monster.tscn" id="6_wcs71"]
 [ext_resource type="PackedScene" uid="uid://koyq25lk2k4g" path="res://Block/question_block.tscn" id="7_7c477"]
+[ext_resource type="Script" uid="uid://snkn7rsldu31" path="res://Map/area_2d.gd" id="8_bgsv1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e8at2"]
 texture = ExtResource("1_mcmny")
@@ -109,6 +110,9 @@ texture = ExtResource("1_mcmny")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_e8at2")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(60873, 140)
+
 [node name="Node2D" type="Node2D" unique_id=1885433730]
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=897951022]
@@ -153,3 +157,12 @@ scale = Vector2(3, 3)
 spawn_item_scene = ExtResource("6_wcs71")
 scale_x = 0.05
 scale_y = 0.05
+
+[node name="Area2D" type="Area2D" parent="." unique_id=240435068]
+script = ExtResource("8_bgsv1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2117510258]
+position = Vector2(-1711, 746)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
