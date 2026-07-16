@@ -26,3 +26,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		print("The Player jumped on me!")
 		queue_free()
+
+
+func _on_timer_timeout() -> void:
+	print("turn around")
+	is_going_right = !is_going_right

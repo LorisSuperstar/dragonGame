@@ -25,4 +25,9 @@ shape = SubResource("RectangleShape2D_ms1lq")
 position = Vector2(72, -148)
 shape = SubResource("RectangleShape2D_ipabm")
 
+[node name="Timer" type="Timer" parent="." unique_id=614747201]
+wait_time = 2.0
+autostart = true
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
