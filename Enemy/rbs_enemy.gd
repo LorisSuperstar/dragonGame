@@ -25,6 +25,10 @@ func _physics_process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		print("The Player jumped on me!")
+		$CollisionShape2D.set_deferred("disabled", true)
+		$Dead.play()
+		hide()
+		await $Dead.finished
 		queue_free()
 
 

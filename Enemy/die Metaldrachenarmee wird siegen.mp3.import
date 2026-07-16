@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7yit5uqq55gg"
+path="res://.godot/imported/die Metaldrachenarmee wird siegen.mp3-233456ecb78d404b4167a8b2b35f3767.mp3str"
+
+[deps]
+
+source_file="res://Enemy/die Metaldrachenarmee wird siegen.mp3"
+dest_files=["res://.godot/imported/die Metaldrachenarmee wird siegen.mp3-233456ecb78d404b4167a8b2b35f3767.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
