@@ -43,5 +43,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			
 func make_normal_size() -> void:
 	scale = Vector2(0.2, 0.2)
+	big = true
 func make_smaller() -> void:
 	scale = Vector2(0.2, 0.1)
+	big = false
