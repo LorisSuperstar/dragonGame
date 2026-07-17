@@ -873,8 +873,8 @@ scale = Vector2(0.1, 0.1)
 position = Vector2(910.99994, 474.99997)
 scale = Vector2(0.1, 0.1)
 
-[node name="rbs_enemy" parent="." unique_id=2090878590 instance=ExtResource("5_ytwkd")]
-position = Vector2(676, 485)
+[node name="rbs_enemy_tscn" parent="." unique_id=998110745 instance=ExtResource("5_ytwkd")]
+position = Vector2(730, 489)
 scale = Vector2(0.3, 0.3)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
