@@ -30,7 +30,7 @@ shape = SubResource("RectangleShape2D_ipabm")
 wait_time = 2.0
 autostart = true
 
-[node name="Dead" type="AudioStreamPlayer2D" parent="." unique_id=303458277]
+[node name="Dead" type="AudioStreamPlayer2D" parent="." unique_id=303458277 groups=["enemies"]]
 stream = ExtResource("3_ma2bq")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

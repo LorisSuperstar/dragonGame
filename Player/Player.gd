@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "Ofenkäse_Enemy" or body.name == "rbs_enemy" or body.name == "rbs_enemy_tscn":
+	if body.is_in_group("enemies"):
 		if big == true:
 			$Damage.play()
 			big = false
@@ -54,3 +54,21 @@ func make_normal_size() -> void:
 func make_smaller() -> void:
 	scale = Vector2(0.2, 0.1)
 	big = false
+
+
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	print("getdamage haha")
+	if body.is_in_group("damageBlocks"):
+		print("getdamage haha")
+		if big == true:
+			$Damage.play()
+			big = false
+		else:
+			print("dead now?")
+			hide()
+			var camera = get_node_or_null("Camera2D")
+			remove_child(camera)
+			$CollisionShape2D.set_deferred("disabled", true)
+			$Dead.play()
+			await $Dead.finished
+			queue_free()

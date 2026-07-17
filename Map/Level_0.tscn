@@ -136,11 +136,11 @@ scale = Vector2(0.2, 0.2)
 
 [node name="Enemys" type="Node2D" parent="." unique_id=316090006]
 
-[node name="Ofenkäse_Enemy" parent="Enemys" unique_id=1464238020 instance=ExtResource("4_k02v8")]
+[node name="Ofenkäse_Enemy" parent="Enemys" unique_id=1464238020 groups=["enemies"] instance=ExtResource("4_k02v8")]
 position = Vector2(910.99994, 474.99997)
 scale = Vector2(0.1, 0.1)
 
-[node name="rbs_enemy" parent="Enemys" unique_id=2090878590 instance=ExtResource("5_rq3ce")]
+[node name="rbs_enemy" parent="Enemys" unique_id=2090878590 groups=["enemies"] instance=ExtResource("5_rq3ce")]
 position = Vector2(676, 485)
 scale = Vector2(0.3, 0.3)
 

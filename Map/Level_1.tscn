@@ -866,10 +866,11 @@ position = Vector2(-1711, 746)
 shape = SubResource("RectangleShape2D_yf5fn")
 
 [node name="Goal" parent="." unique_id=861521742 instance=ExtResource("9_ber6b")]
-position = Vector2(2320, 357.99994)
+position = Vector2(2916, 410)
 scale = Vector2(0.1, 0.1)
+next_level_scene = "uid://cy5ao8sbm4odf"
 
-[node name="Ofenkäse_Enemy" parent="." unique_id=1464238020 instance=ExtResource("4_o8i3h")]
+[node name="Ofenkäse_Enemy" parent="." unique_id=1464238020 groups=["damageBlocks"] instance=ExtResource("4_o8i3h")]
 position = Vector2(910.99994, 474.99997)
 scale = Vector2(0.1, 0.1)
 
