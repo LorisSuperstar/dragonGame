@@ -199,7 +199,7 @@ shape = SubResource("RectangleShape2D_yf5fn")
 [node name="Goal" parent="." unique_id=861521742 instance=ExtResource("8_67ph7")]
 position = Vector2(2320, 357.99994)
 scale = Vector2(0.1, 0.1)
-next_level_scene = "uid://btjdtxlgqndik"
+next_level_scene = "uid://cuv6ym2fancnq"
 
 [node name="Ofenkäse_Enemy" parent="." unique_id=1464238020 groups=["enemies"] instance=ExtResource("9_t6nma")]
 position = Vector2(910.99994, 474.99997)
