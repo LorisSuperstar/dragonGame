@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cfbbk76oi0jay"]
+
+[ext_resource type="Script" uid="uid://cskl6me2givbg" path="res://Block/check_point.gd" id="1_7au6x"]
+[ext_resource type="Texture2D" uid="uid://clwktmuwnlc2j" path="res://Block/Screenshot_2026-07-17_144829-removebg-preview.png" id="1_uu6af"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
+radius = 81.0
+height = 500.0
+
+[node name="CheckPoint" type="Area2D" unique_id=2143180015]
+script = ExtResource("1_7au6x")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=56355994]
+texture = ExtResource("1_uu6af")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2120305923]
+position = Vector2(9, 9)
+shape = SubResource("CapsuleShape2D_g4v7s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -700
 var big = true
+var global_position_checkpoint: Vector2 = Vector2.ZERO
 
 func _physics_process(delta: float) -> void:
 	velocity.x = 0
@@ -41,13 +42,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			big = false
 		else:
 			print("dead now?")
-			hide()
-			var camera = get_node_or_null("Camera2D")
-			remove_child(camera)
-			$CollisionShape2D.set_deferred("disabled", true)
 			$Dead.play()
-			await $Dead.finished
-			queue_free()
+			global_position = global_position_checkpoint
+			big = true
+			velocity = Vector2.ZERO
 func make_normal_size() -> void:
 	scale = Vector2(0.2, 0.2)
 	big = true
@@ -65,10 +63,8 @@ func _on_area_2d_2_body_entered(body: Node2D) -> void:
 			big = false
 		else:
 			print("dead now?")
-			hide()
-			var camera = get_node_or_null("Camera2D")
-			remove_child(camera)
-			$CollisionShape2D.set_deferred("disabled", true)
 			$Dead.play()
-			await $Dead.finished
-			queue_free()
+			
+			global_position = global_position_checkpoint
+			big = true
+			velocity = Vector2.ZERO
