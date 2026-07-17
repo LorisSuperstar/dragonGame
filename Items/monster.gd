@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 100
 var is_going_right = false
+var is_dead = false
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -23,8 +24,15 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	if is_dead:
+		return
 	if body.has_method("make_normal_size"):
+		is_dead = true
 		body.make_normal_size()
+		$CollisionShape2D.set_deferred("disabled", true)
+		hide()
+		$Dead.play()
+		await $Dead.finished
 		queue_free()
 
 

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://eq13bcdfp1yh" path="res://Player/camera_2d.gd" id="2_vvw5e"]
 [ext_resource type="AudioStream" uid="uid://y58tq7o3lg41" path="res://Player/VERFLUCHT NOCHMAL.mp3" id="4_srlcf"]
 [ext_resource type="AudioStream" uid="uid://dugoarwix03ja" path="res://Player/etzela.mp3" id="5_8g4oa"]
+[ext_resource type="AudioStream" uid="uid://d28dvg3k1oejh" path="res://Player/TRAUT EUCH!.mp3" id="6_6ysni"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_57qmd"]
 radius = 54.0
@@ -35,9 +36,11 @@ shape = SubResource("CapsuleShape2D_g4v7s")
 
 [node name="Dead" type="AudioStreamPlayer2D" parent="." unique_id=197583294]
 stream = ExtResource("4_srlcf")
-volume_db = 1.0
 
 [node name="Jump" type="AudioStreamPlayer2D" parent="." unique_id=1296002051]
 stream = ExtResource("5_8g4oa")
+
+[node name="Damage" type="AudioStreamPlayer2D" parent="." unique_id=1488700999]
+stream = ExtResource("6_6ysni")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

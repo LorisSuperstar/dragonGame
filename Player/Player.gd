@@ -37,6 +37,7 @@ func _physics_process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Ofenkäse_Enemy" or body.name == "rbs_enemy" or body.name == "rbs_enemy_tscn":
 		if big == true:
+			$Damage.play()
 			big = false
 		else:
 			print("dead now?")
