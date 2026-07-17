@@ -8,7 +8,6 @@ extends StaticBody2D
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 	$open.play()
-	await $open.finished
 	animated_sprite.play("open")
 	var item = spawn_item_scene.instantiate()
 	item.scale = Vector2(scale_x, scale_y)

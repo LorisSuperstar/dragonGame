@@ -52,6 +52,7 @@ script = ExtResource("1_a8d13")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=518239472]
 sprite_frames = SubResource("SpriteFrames_twipv")
 animation = &"open"
+frame_progress = 0.85303974
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1827580782]
 position = Vector2(0.5, 1.5)
