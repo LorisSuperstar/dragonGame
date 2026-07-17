@@ -870,11 +870,11 @@ position = Vector2(2916, 410)
 scale = Vector2(0.1, 0.1)
 next_level_scene = "uid://cy5ao8sbm4odf"
 
-[node name="Ofenkäse_Enemy" parent="." unique_id=1464238020 groups=["damageBlocks"] instance=ExtResource("4_o8i3h")]
+[node name="Ofenkäse_Enemy" parent="." unique_id=1464238020 groups=["enemies"] instance=ExtResource("4_o8i3h")]
 position = Vector2(910.99994, 474.99997)
 scale = Vector2(0.1, 0.1)
 
-[node name="rbs_enemy_tscn" parent="." unique_id=998110745 instance=ExtResource("5_ytwkd")]
+[node name="rbs_enemy_tscn" parent="." unique_id=998110745 groups=["enemies"] instance=ExtResource("5_ytwkd")]
 position = Vector2(730, 489)
 scale = Vector2(0.3, 0.3)
 
